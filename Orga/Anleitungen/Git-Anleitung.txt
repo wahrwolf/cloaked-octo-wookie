@@ -1,0 +1,71 @@
+So hier nochmal mein kleines Tutorial,
+
+als erstes eine Liste mit den Grundkommandos:
+cd           -        change directory (wechsle das Verzeichnis)
+mkdir     -        make directory (erstelle einen Ordner)
+ls             -        list (zeige alle Datein und Ordner im Verzeíchnis an)
+cat          - concatenate (lese Datei aus)
+rm          -        remove (lösche Datei)
+man       -        manual (Ausführliche Anleitung, zum Verlassen einfach q drücken)
+
+
+Dann eine Liste mit wichtigen Verzeichnissen:
+. oder ./        - das aktuelle Verzeichnis
+..                    - das übergeordnete Verzeichnis
+/                     - das Stammverzeichnis (root-directory)
+
+
+Git-Spezifische Kommandos:
+git clone        - klont ein repostory
+git add           - merkt Änderungen vor
+git commit    - speichert Änderungen
+git push         - lädt lokale Änderungen hoch
+git pull           - lädt Änderungen runter
+git init            - inialisiert eine neues git-repostory
+git stash         - setzt das repostory auf den Zustand des letzten commits
+
+Also hier der Ablauf zum starten:
+1. in das richtige Verzeichnis navigieren
+    -mit cd <dir> weiter in die Tiefe
+    -mit cd .. nach oben
+
+2. wenn nötig die Verzeichnisstruktur verändern
+    -mit mkdir <name> ein Verzeichnis erstellen
+    -mit rm -d <dir> ein Verzecihnis löschen (geht nur wenn das Verzeichnis leer ist)
+    mit rm -d <dir>/* alles in einem Order löschen
+
+3. ein Verzeichnis klonen
+    -mit git clone <url> ein repo-Klonen
+
+4. Fröhlich vor sich hinarbeiten
+
+5. Änderungen bestätigten
+    -mit git add <file> einzelne Datein hinzufügen
+    -mit git add <dir>/* einen ganzen Order hinzufügen
+    -mit git add --all alle Änderungen hinzufügen
+    - mit git rm genau das gegenteil
+    - mit git stash alle Änderungen zurücksetzen
+
+6. Änderungen speichern
+    -mit git commit -m "<description>" mit Kommentar abspeichern
+
+7. Neue Version runterladne
+    -mit git pull herunterladen
+
+8. Änderungen hochladen
+    -mit git push hochladen
+
+
+Bei Konflikten:
+    -Grundsätzlich erst commit, dann pull und dann  push.
+    -Bei Konlikten kommt eine Meldung nach dem pull
+    - Lokal Konflikte beheben
+    - Anschließend mit commit bestätigen
+    - und pushen
+
+Bei Fragen hiflt goolge, oder man.
+
+Ein paar nette Tutorials:
+https://www.atlassian.com/git/tutorials/ (sehr ausführlich)
+https://rogerdudler.github.io/git-guide/index.de.html (sehr einfach)
+https://try.github.io/levels/1/challenges/1 (interaktiv)
